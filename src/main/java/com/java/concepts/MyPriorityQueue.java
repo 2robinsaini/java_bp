@@ -2,11 +2,11 @@ package com.java.concepts;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-@Service
+@Component
 public class MyPriorityQueue {
 
     Logger log = LoggerFactory.getLogger(MyPriorityQueue.class);
