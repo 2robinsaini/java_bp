@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Data
 public class Address implements Serializable {
 
+    private Long addressId;
     private Integer houseFlatNum;
     private Integer floorNumber;
     private String streetOrSociety;
