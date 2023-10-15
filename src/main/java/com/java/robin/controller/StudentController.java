@@ -30,6 +30,12 @@ public class StudentController {
         return studentService.addStudent(student);
     }
 
+    @PostMapping(value = "/updateStudent/{rollNumber}",consumes = "application/json" ,produces = "application/json")
+    public List<Student> updateStudent(@RequestBody Student student,@PathVariable Long rollNumber){
+        logger.info("Update student of name {} and rollNumber {}",student.getStdName(),rollNumber);
+        return studentService.updateStudent(student,rollNumber);
+    }
+
     @DeleteMapping(value = "/removeStudent/{rollNumber}" ,produces = "application/json")
     public List<Student> removeStudent(@PathVariable Long rollNumber){
         logger.info("Remove student {}",rollNumber);
